@@ -6,6 +6,7 @@
 
 
 ## Function that prepares a matrix object to caches its inverse function
+## Find the inverse amd return the cache matrix and not calculate it again
 
 makeCacheMatrix <- function(x = matrix()) {
   inv<- NULL
@@ -23,7 +24,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Function will run the inverse if the matrix isn't cached
-## Returns the inverse matrix
+## Returns the inverse matrix if it is cached.
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
